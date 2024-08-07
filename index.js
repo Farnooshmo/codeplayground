@@ -22,3 +22,23 @@ function whosPaying(names) {
 }
 let namesList = ["Alice", "Bob", "Charlie", "David", "Eve"];
 whosPaying(namesList);
+// -----***-----***-----***-----***-----***-----***-----***-----***-----***-----***-----***-----
+
+function fizzBuzz(n) {
+  let arr = [];
+  let i = 1;
+  while (i <= 20) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      arr.push("fizzBuzz");
+    } else if (i % 3 === 0) {
+      arr.push("fizz");
+    } else if (i % 5 === 0) {
+      arr.push("buzz");
+    } else {
+      arr.push(i.toString());
+    }
+    i++;
+  }
+  return arr;
+}
+fizzBuzz();
