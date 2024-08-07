@@ -14,6 +14,7 @@ function fizzBuzz(n) {
   return arr;
 }
 fizzBuzz(6);
+
 // -----***-----***-----***-----***-----***-----***-----***-----***-----***-----***-----***-----
 
 function whosPaying(names) {
@@ -22,6 +23,7 @@ function whosPaying(names) {
 }
 let namesList = ["Alice", "Bob", "Charlie", "David", "Eve"];
 whosPaying(namesList);
+
 // -----***-----***-----***-----***-----***-----***-----***-----***-----***-----***-----***-----
 
 function fizzBuzz(n) {
@@ -37,8 +39,10 @@ function fizzBuzz(n) {
     } else {
       arr.push(i.toString());
     }
-    i++;
+    i++; //if forget to add this line, it become an infinite loop! because after the loop it goes to i and i is 1 and one is les than 20, therefore it does not stop!!!
   }
   return arr;
 }
 fizzBuzz();
+
+// -----***-----***-----***-----***-----***-----***-----***-----***-----***-----***-----***-----
