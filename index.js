@@ -14,3 +14,11 @@ function fizzBuzz(n) {
   return arr;
 }
 fizzBuzz(6);
+// -----***-----***-----***-----***-----***-----***-----***-----***-----***-----***-----***-----
+
+function whosPaying(names) {
+  let randomPerson = Math.floor(Math.random() * names.length);
+  return names[randomPerson] + " is going to buy lunch today!";
+}
+let namesList = ["Alice", "Bob", "Charlie", "David", "Eve"];
+whosPaying(namesList);
