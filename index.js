@@ -46,3 +46,29 @@ function fizzBuzz(n) {
 fizzBuzz();
 
 // -----***-----***-----***-----***-----***-----***-----***-----***-----***-----***-----***-----
+
+function singBottlesOfBeer() {
+  let numberOfBottles = 99;
+  let lyrics = "";
+
+  while (numberOfBottles >= 0) {
+    const currentBottleWord = numberOfBottles === 1 ? "bottle" : "bottles";
+
+    lyrics += `${numberOfBottles} ${currentBottleWord} of beer on the wall `;
+    lyrics += `${numberOfBottles} ${currentBottleWord} of beer,`;
+    lyrics += " Take one down, pass it around, ";
+
+    numberOfBottles--;
+
+    const nextBottleWord = numberOfBottles === 1 ? "bottle" : "bottles";
+
+    if (numberOfBottles >= 0) {
+      lyrics += `${numberOfBottles} ${nextBottleWord} of beer on the wall.`;
+    } else {
+      lyrics += "No more bottles of beer on the wall.";
+    }
+  }
+
+  return lyrics;
+}
+singBottlesOfBeer();
