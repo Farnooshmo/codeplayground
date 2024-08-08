@@ -47,28 +47,43 @@ fizzBuzz();
 
 // -----***-----***-----***-----***-----***-----***-----***-----***-----***-----***-----***-----
 
-function singBottlesOfBeer() {
-  let numberOfBottles = 99;
-  let lyrics = "";
+// function singBottlesOfBeer() {
+//   let numberOfBottles = 99;
+//   let lyrics = "";
 
-  while (numberOfBottles >= 0) {
-    const currentBottleWord = numberOfBottles === 1 ? "bottle" : "bottles";
+//   while (numberOfBottles >= 0) {
+//     const currentBottleWord = numberOfBottles === 1 ? "bottle" : "bottles";
 
-    lyrics += `${numberOfBottles} ${currentBottleWord} of beer on the wall `;
-    lyrics += `${numberOfBottles} ${currentBottleWord} of beer,`;
-    lyrics += " Take one down, pass it around, ";
+//     lyrics += `${numberOfBottles} ${currentBottleWord} of beer on the wall `;
+//     lyrics += `${numberOfBottles} ${currentBottleWord} of beer,`;
+//     lyrics += " Take one down, pass it around, ";
 
-    numberOfBottles--;
+//     numberOfBottles--;
 
-    const nextBottleWord = numberOfBottles === 1 ? "bottle" : "bottles";
+//     const nextBottleWord = numberOfBottles === 1 ? "bottle" : "bottles";
 
-    if (numberOfBottles >= 0) {
-      lyrics += `${numberOfBottles} ${nextBottleWord} of beer on the wall.`;
-    } else {
-      lyrics += "No more bottles of beer on the wall.";
-    }
+//     if (numberOfBottles >= 0) {
+//       lyrics += `${numberOfBottles} ${nextBottleWord} of beer on the wall.`;
+//     } else {
+//       lyrics += "No more bottles of beer on the wall.";
+//     }
+//   }
+
+//   return lyrics;
+// }
+// singBottlesOfBeer();
+
+// -----***-----***-----***-----***-----***-----***-----***-----***-----***-----***-----***-----
+
+function fibonacciGenerator(n) {
+  if (n <= 0) return [];
+  if (n === 1) return [0];
+  if (n === 2) return [0, 1];
+  let arr = [0, 1];
+  for (let i = 2; i < n; i++) {
+    arr.push(arr[i - 1] + arr[i - 2]);
   }
 
-  return lyrics;
+  return arr;
 }
-singBottlesOfBeer();
+fibonacciGenerator();
